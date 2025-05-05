@@ -1,0 +1,32 @@
+{
+  "name": "ppo2-backend",
+  "version": "1.0.0",
+  "description": "the backend server from my PPO 2",
+  "keywords": [
+    "application",
+    "server",
+    "backend",
+    "ppo2",
+    "po2",
+    "ppo2",
+    "backend"
+  ],
+  "license": "ISC",
+  "author": "William Boeira",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
