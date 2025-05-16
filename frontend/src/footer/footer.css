@@ -1,0 +1,23 @@
+footer{
+    display: grid;
+    background-color: #3a5f73;
+    height: fit-content;
+    bottom: 0px;
+    & ul {
+        display: flex;
+        flex-direction: column;
+        color: white;
+    }
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+    & ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}

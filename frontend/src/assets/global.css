@@ -1,0 +1,29 @@
+:root {
+    --nav-logo-heigth: 6rem;
+    --nav-opbuttons-height: 3rem;
+    --nav-height: calc(var(--nav-logo-heigth) + var(--nav-opbuttons-height));
+}
+
+#root {
+    display: grid;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+div#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;  
+}
+div.break  {
+    background-color: black;
+    height: 1px;
+}

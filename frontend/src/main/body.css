@@ -1,0 +1,74 @@
+div#root {
+    box-sizing: border-box;
+    padding-top: var(--nav-height);
+    min-height: 100vh;
+}
+div#image-box {
+    box-sizing: border-box;
+    --image-width: 100vw;
+    position: relative;
+    width: var(--image-width);
+    display: grid;
+    align-items: center;
+    padding: 4.5rem;
+    background-image: url('./src/main/localassets/greek_temple.png');
+    background-size: cover;
+    background-position: center;
+}
+
+img#greek_temple {
+    max-width: var(--image-width);
+    height: auto;
+    z-index: 0;
+}
+
+div#gradient {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    width: calc(var(--image-width)/2);
+    height: 100%;
+    z-index: 1;
+}
+
+h1#frontText {
+    --frontTextSize: 3rem;
+    color: white;
+    max-width: calc(var(--image-width)/4);
+    z-index: 2;
+    font-size: var(--frontTextSize);
+    font-family: Merryweather Sans;
+    & span {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: calc(var(--frontTextSize) * 1.25);
+    }
+}
+
+div#gradient {
+    position: absolute;
+}
+
+div#about {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+div#about p, div#about h2 {
+    font-family: Merryweather Sans;
+}
+
+div#about h2 {
+    --fontSize: 2rem;
+    font-size: var(--fontSize);
+}
+
+div#about p {
+    font-size: 1.5rem;
+    max-width: 70%;
+    text-align: justify;
+}
+
+div.break {
+    width: calc(var(--fontSize)*0.75);
+}

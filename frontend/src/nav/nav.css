@@ -1,0 +1,77 @@
+h1{
+    font-size: 2.7rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+nav {
+    position: fixed;
+    top: 0;
+    background-color: #f6f3ea;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    width: 100%;
+    height: var(--nav-height);
+}
+div.logo {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: var(--nav-logo-heigth);
+}
+div.title{
+    width: 100%;
+    & h1 {
+        text-align: center;
+    }
+}
+div.opbuttons {
+    position: absolute;
+    right: 0;
+    display: flex;
+    padding: 1rem;
+    height: var(--nav-opbuttons-height);
+    gap: 1rem;
+}
+div.nav-links { 
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #3a5f73;
+    color: white;
+    cursor: pointer;
+    font-family: Merryweather Sans;
+    font-size: 1.3rem;
+    padding: .7rem;
+    border: 1px solid black;
+    & p {
+        margin: 0;
+    }
+}
+div.nav-link{
+    display: flex;
+    flex-direction: column;
+}
+.closed {
+    display: none !important;
+    opacity: transparent;
+    padding: 0;
+}
+button {
+    border-radius: 10px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    padding: .7rem;
+    & p {
+        font-family: Noto Sans;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+}
+button.login {
+    background-color: #3a5f73;
+    font-weight: bold;
+    color: white;
+    height: fit-content;
+}

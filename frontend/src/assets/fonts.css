@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Merryweather Sans';
+    src: url('../assets/Merriweather_Sans/MerriweatherSans-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../assets/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf') format('truetype');
+}
