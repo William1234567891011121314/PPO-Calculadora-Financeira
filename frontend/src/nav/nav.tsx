@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './nav.css'
-import { use, useState } from 'react'
-import { useEffect } from 'react';
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 function Nav() {
     const [isClosed, setIsClosed] = useState<{

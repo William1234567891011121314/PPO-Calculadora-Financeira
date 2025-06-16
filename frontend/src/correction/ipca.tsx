@@ -12,11 +12,11 @@ function IPCA() {
                         <div id='inputs'>
                             <div>
                                 <label>Valor Inicial:</label>
-                                <input type='number' id='initial-value' placeholder='0,00' />
+                                <input type='number' id='initial-value' placeholder='0,00' className='ipca'/>
                                 <label>Data Inicial:</label>
-                                <input type='date' id='initial-date' />
+                                <input type='date' id='initial-date' className='ipca'/>
                                 <label>Data Final:</label>
-                                <input type='date' id='final-date' />
+                                <input type='date' id='final-date' className='ipca'/>
                             </div>
                             <div>
                                 <label>Valor final:</label>

@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Signup.css'
+import register from './signup.js'
 
 function Signup() {
     const [password, setPassword] = useState('');
+    const [name, setName] = useState('')
+    const [confirmPasswd, setConfirmPasswd] = useState('')
     const [strength, setStrength] = useState('weak');
     const [hidden, setHidden] = useState<{
         isHidden1: boolean;
@@ -27,10 +30,10 @@ function Signup() {
             isHidden3: true,
         });
     }
+    let points = 0;
     function changePasswordStrength(password: string) {
         handleHiddenAll();
         setPassword(password);
-        let points = 0;
         if (password.length >= 8) points++;
         if (/[0-9]/.test(password)) points++;
         if (/[A-Z]/.test(password) && /[a-z]/.test(password)) points++;
@@ -57,7 +60,12 @@ function Signup() {
                 <div id='login'>
                     <div id='login-box'>
                         <label>Nome:</label>
-                        <input type="text" id='name' />
+                        <input 
+                            type="text" 
+                            id='name'
+                            value={name}
+                            onChange = {e => setName(e.target.value)}
+                        />
                         <label>Senha</label>
                         <input
                             type='text'
@@ -78,11 +86,16 @@ function Signup() {
                             <div id='very-strong' className={hidden.isHidden3 ? 'hidden' : 'show'}></div>
                         </div>
                         <label>Confirmação de Senha</label>
-                        <input type='text' id='passwordConfirmation' />
+                        <input 
+                            type='text' 
+                            id='passwordConfirmation'
+                            value={confirmPasswd}
+                            onChange={e => setConfirmPasswd(e.target.value)}    
+                        />
                     </div>
                     <div id='login-buttons'>
                         <Link to='/' id='exit' className='transparent'><p>Sair</p></Link>
-                        <Link to='/' id='login-button' className='solid'><p>Signup</p></Link>
+                        <button onClick={() => alert(register(name, password, confirmPasswd))} id='login-button' className='solid'><p>Signup</p></button>
                     </div>
                 </div>
             </div>

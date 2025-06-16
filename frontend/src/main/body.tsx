@@ -7,7 +7,7 @@ function Body() {
         <>
             <div id='root'>
                 <div id='main'>
-                    <div id='content'>
+                    <div id='body'>
                         <div id="image-box">
                             <h1 id='frontText'>Administre suas finanças com a <span id="timesNewRoman">Modus</span></h1>
                             <div id="gradient"></div>
