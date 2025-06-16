@@ -11,27 +11,28 @@ nav {
     flex-direction: column;
     z-index: 3;
     width: 100%;
-    height: var(--nav-height);
+    height: fit-content;
 }
-div.logo {
+a.logo {
     position: relative;
     display: flex;
     justify-content: right;
     align-items: center;
-    height: var(--nav-logo-heigth);
+    text-decoration: none;
+    color: black;
 }
 div.title{
     width: 100%;
     & h1 {
         text-align: center;
+        margin: 0;
     }
 }
 div.opbuttons {
     position: absolute;
     right: 0;
     display: flex;
-    padding: 1rem;
-    height: var(--nav-opbuttons-height);
+    padding: 1rem;  
     gap: 1rem;
 }
 div.nav-links { 
@@ -57,19 +58,13 @@ div.nav-link{
     opacity: transparent;
     padding: 0;
 }
-button {
-    border-radius: 10px;
+a.sign-up {
     border: 0;
+    color: black;
     background-color: transparent;
     cursor: pointer;
-    padding: .7rem;
-    & p {
-        font-family: Noto Sans;
-        font-size: 1.5rem;
-        margin: 0;
-    }
 }
-button.login {
+a.login {
     background-color: #3a5f73;
     font-weight: bold;
     color: white;

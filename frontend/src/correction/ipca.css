@@ -1,0 +1,49 @@
+p{
+    margin: 0
+}
+input {
+    width: 20rem;
+}
+div#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-background-color);
+}
+div#content {
+    height: fit-content;
+    width: fit-content;
+    background-color: white;
+}
+
+p#title {
+    text-align: center;
+    font-family: Merryweather Sans;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+div#header {
+    background-color: var(--primary-color);
+}
+
+div#inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+div#inputs > div {
+    display: grid;
+    gap: .5rem;
+    padding: .5rem;
+}
+
+div#operations {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5rem;
+}
+
+div#root-content {
+    padding: 1rem;
+}
