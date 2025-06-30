@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Signup.css'
-import register from './signup.js'
+import {register, passwdCheck} from './signup.js'
 
 function Signup() {
     const [password, setPassword] = useState('');
@@ -30,14 +30,11 @@ function Signup() {
             isHidden3: true,
         });
     }
-    let points = 0;
     function changePasswordStrength(password: string) {
+        let points: number = 0;
         handleHiddenAll();
         setPassword(password);
-        if (password.length >= 8) points++;
-        if (/[0-9]/.test(password)) points++;
-        if (/[A-Z]/.test(password) && /[a-z]/.test(password)) points++;
-        if (/[^a-zA-Z0-9]/.test(password)) points++;
+        passwdCheck(password, points)
 
         if (points === 0) setStrength('weak');
         if (points >= 1) {
@@ -95,7 +92,7 @@ function Signup() {
                     </div>
                     <div id='login-buttons'>
                         <Link to='/' id='exit' className='transparent'><p>Sair</p></Link>
-                        <button onClick={() => alert(register(name, password, confirmPasswd))} id='login-button' className='solid'><p>Signup</p></button>
+                        <button onClick={async () => alert( await register(name, password, confirmPasswd))} id='login-button' className='solid'><p>Signup</p></button>
                     </div>
                 </div>
             </div>
