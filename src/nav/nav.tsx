@@ -3,6 +3,12 @@ import './nav.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
+async function CheckNav() {
+    const req = await fetch(import.meta.env.VITE_BACKEND_URL + '/api/getSession')
+    const data = await req.json()
+    return data.name
+}
+
 function Nav() {
     const [isClosed, setIsClosed] = useState<{
         isClosedNav1: boolean;
@@ -34,8 +40,16 @@ function Nav() {
                         <h1>Modus Invest</h1>
                     </div>
                     <div className='opbuttons'>
-                        <Link to='/signup' className='transparent'><p>Sign Up</p></Link>
-                        <Link to='/login' className='solid'><p>Login</p></Link>
+                        {!sessionStorage.name ? (
+                            <>
+                                <Link to='/signup' className='transparent'><p>Sign Up</p></Link>
+                                <Link to='/login' className='solid'><p>Login</p></Link>
+                            </>
+                        ) : (
+                            <>
+                                <p>{CheckNav()}</p>
+                            </>
+                        )}
                     </div>
                 </Link>
                 <div className="nav-links">

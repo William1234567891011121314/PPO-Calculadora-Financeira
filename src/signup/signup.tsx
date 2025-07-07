@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Signup.css'
-import {register, passwdCheck} from './signup.js'
+import {register, passwdCheck} from './signup.ts'
 
 function Signup() {
     const [password, setPassword] = useState('');
