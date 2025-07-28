@@ -1,4 +1,3 @@
-
 export async function register (name: string, passwd: string, confirmPasswd: string) {
     if (passwd !== confirmPasswd) {
         return "Senhas não conferem"
@@ -15,6 +14,7 @@ export async function register (name: string, passwd: string, confirmPasswd: str
         body: JSON.stringify({name: name, password: passwd})
     })
     const resJson: any = await res.json()
+    console.log(resJson.msg)
     return resJson.msg
 }
 

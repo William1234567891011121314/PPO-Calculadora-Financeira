@@ -35,10 +35,10 @@ function Nav() {
     return (
         <>
             <nav className="nav">
-                <Link to='/' className="logo">
-                    <div className='title'>
-                        <h1>Modus Invest</h1>
-                    </div>
+                <div className='logo'>
+                    <Link to='/'>
+                        <h1 className='title'>Modus Invest</h1>
+                    </Link>                
                     <div className='opbuttons'>
                         {!sessionStorage.name ? (
                             <>
@@ -51,7 +51,7 @@ function Nav() {
                             </>
                         )}
                     </div>
-                </Link>
+                </div>
                 <div className="nav-links">
                     <div id='nav-1' className='nav-link' onMouseEnter={() => handleClosed('isClosedNav1')} onMouseLeave={() => handleClosed('isClosedNav1')}>
                         <p>Financiamentos</p>
@@ -78,5 +78,5 @@ function Nav() {
         </>
     )
 }
-
+    
 export {Nav}

@@ -34,7 +34,7 @@ function Signup() {
         let points: number = 0;
         handleHiddenAll();
         setPassword(password);
-        passwdCheck(password, points)
+        points = passwdCheck(password, points);
 
         if (points === 0) setStrength('weak');
         if (points >= 1) {
@@ -65,7 +65,7 @@ function Signup() {
                         />
                         <label>Senha</label>
                         <input
-                            type='text'
+                            type='password'
                             id='password'
                             value={password}
                             onChange={e => changePasswordStrength(e.target.value)}
@@ -84,7 +84,7 @@ function Signup() {
                         </div>
                         <label>Confirmação de Senha</label>
                         <input 
-                            type='text' 
+                            type='password' 
                             id='passwordConfirmation'
                             value={confirmPasswd}
                             onChange={e => setConfirmPasswd(e.target.value)}    
@@ -92,7 +92,16 @@ function Signup() {
                     </div>
                     <div id='login-buttons'>
                         <Link to='/' id='exit' className='transparent'><p>Sair</p></Link>
-                        <button onClick={async () => alert( await register(name, password, confirmPasswd))} id='login-button' className='solid'><p>Signup</p></button>
+                        <button onClick={
+                            async () => {
+                                try{
+                                    alert(await register(name, password, confirmPasswd))
+                                } catch (e) {
+                                    console.log(e)
+                                }
+                            }
+                        }
+                         id='login-button' className='solid'><p>Signup</p></button>
                     </div>
                 </div>
             </div>

@@ -13,20 +13,21 @@ nav {
     width: 100%;
     height: fit-content;
 }
-a.logo {
+.logo {
     position: relative;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     text-decoration: none;
     color: black;
 }
-div.title{
+div.logo>a {
+    
+}
+h1.title{
     width: 100%;
-    & h1 {
-        text-align: center;
-        margin: 0;
-    }
+    text-align: center;
+    margin: 0;
 }
 div.opbuttons {
     position: absolute;
